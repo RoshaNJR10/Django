@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="2px solid black collapse">
+        <tr >
+            <th>Name</th>
+            <th>Address</th>
+            <th>Gender</th>
+            <th>Faculty</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Roll</th>
+            <th>Contact</th>
+           
+        </tr>
+        {% for da in data %}
+        <tr>
+            
+          
+            <td>{{da.name}}</td>
+            <td>{{da.address}}</td>
+            <td>{{da.gender}}</td>
+            <td>{{da.faculty}}</td>
+            <td>{{da.username}}</td>
+            <td>{{da.password}}</td>
+           
+            <td>{{da.roll}}</td>
+            <td>{{da.contact}}</td>
+           
+
+        </tr>
+        {% endfor %}
+        
+       
+    </table>
+    
+   
+</body>
+</html>

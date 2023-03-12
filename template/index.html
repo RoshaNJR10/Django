@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Management System</title>
+    <style>
+        form{
+            border: 2px solid ;
+            padding-left: 40%;
+            align-items: center;
+            background-color: aqua;
+        }
+        form textarea{
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome!!!</h1><br><br>
+    <h2>Introduction</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur, totam, molestiae aut quibusdam minima eveniet cumque amet recusandae iste sapiente delectus? Vero dolorum illum porro sapiente cupiditate ea quaerat velit.</p>
+    <br><hr>
+    <h2>About</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur impedit facilis, possimus ratione laboriosam eligendi suscipit soluta voluptates explicabo saepe inventore culpa in repellat voluptatum facere! Facilis consequatur vel, ab nobis optio id! Et velit id, ducimus dolore voluptas quo corporis officiis laboriosam nemo! Quaerat amet illum beatae nam dignissimos quas blanditiis recusandae sunt cum dicta repellat incidunt harum placeat, reprehenderit, facere ut, molestias alias odit quo id! Vitae inventore corrupti illo voluptates voluptatem? Maxime excepturi ratione nisi alias consequuntur inventore animi eos voluptate amet nihil voluptatum, cupiditate mollitia assumenda eveniet laborum ex nobis nam non facilis quas quis sapiente?</p>
+    <form action="/" name="form" method="POST">
+        {% csrf_token %}
+    
+
+       NAme: <input type="text" name="name" placeholder="Enter your name" required><br>
+       Address:<input type="text" name="address" id="address" placeholder="Enter address"><br>
+       Gender: <input type="radio" name="gender" id="male" value="male">male
+        <input type="radio" name="gender" id="female" value="female">female <br>
+       Roll: <input type="number" name="roll" id="">
+       Contact: <input type="number" name="contact" id="">
+        Faculty:<select name="faculty" id="faculty">
+            <option value="BCA">BCA</option>
+            <option value="BBS">BBS</option>
+            <option value="BBA">BBA</option>
+            <option value="Bsc CSIt">BSC CSIT</option>
+        </select><br>
+        Username:<input type="email" name="email" id="" placeholder="ram@gmail.com"><br>
+        Password:<input type="password" name="pass" id="" placeholder="Enter password"><br>
+        <input type="submit" name="submit" id="" value="submit">
+       
+    </form>
+
+
+</body>
+</html>
