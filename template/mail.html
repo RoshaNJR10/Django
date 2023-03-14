@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/email/" method="POST">
+        {% csrf_token %}
+        To: <input type="email" name="to" id="" placeholder="enter email"><br><br>
+        Cc: <input type="email" name="cc" id="" placeholder="Enter email" ><br><br>
+        Subject: <input type="text" name="subject" id="" placeholder="Enter subject"><br><br>
+        Message: <input type="text" name="message" id="" placeholder="Enter message"><br><br>
+        <button type="submit" > Send</button>
+       
+    </form>
+</body>
+</html>
