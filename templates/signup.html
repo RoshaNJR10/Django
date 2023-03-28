@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+        <main class="form-signin p-3 mb-2 bg-secondary text-dark">
+            <form name="myform" action="/signup/" method="POST">
+              {% csrf_token %}
+              <img class="mb-2" src="{% static '1.webp' %}" alt="" width="72" height="57">
+              <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+              <div class="form-floating m-3">
+                <input type="text" class="form-control " name="name"  id="floatingInput" placeholder="Enter Name">
+                <label for="floatingInput">Name</label>
+              </div>
+              <div class="form-floating m-3">
+                <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+              </div>
+              <div class="form-floating m-3">
+                <input type="text" class="form-control" name="user" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Username</label>
+              </div>
+              <div class="form-floating m-3">
+                <input type="password" class="form-control" name="pass1" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Password</label>
+              </div>
+              <div class="form-floating m-3">
+                <input type="password" class="form-control" name="pass2" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Confirm Password</label>
+              </div>
+          
+              <div class="checkbox mb-3">
+                <label>
+                  <input type="checkbox" value="remember-me"> Remember me
+                </label>
+              </div>
+              <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+              <p class="mt-5 mb-3 text-muted">© 2017–2021</p>
+            </form>
+          </main>
+        
+    </div>
+  </section><!-- End Hero -->
+  {% endblock content %}
